@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Speakers — NEQM 2026</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Adding some quick styles for the different status sections */
+    .speaker-section { margin-bottom: 3rem; }
+    .speaker-section h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
+    .status-label { font-size: 0.8rem; text-transform: uppercase; color: #666; letter-spacing: 1px; }
+    .tentative-grid { opacity: 0.8; } /* Subtly distinguish unconfirmed speakers */
+  </style>
 </head>
 <body>
 
@@ -15,7 +22,6 @@
     <li><a href="speakers.html" class="active">Speakers</a></li>
     <li><a href="schedule.html">Schedule</a></li>
     <li><a href="venue.html">Venue</a></li>
-    <li><a href="poster.html">Poster</a></li>
   </ul>
 </nav>
 
@@ -25,19 +31,53 @@
 </div>
 
 <div class="container wide">
-  <p class="placeholder-note">Speaker list to be announced. Check back soon.</p>
 
-  <!--
-  Uncomment and duplicate to add speakers:
-
-  <div class="speaker-grid">
-    <div class="speaker-card">
-      <div class="avatar">AB</div>
-      <div class="name">Full Name</div>
-      <div class="affiliation">University / Institute</div>
+  <div class="speaker-section">
+    <h2>Confirmed Speakers</h2>
+    <div class="speaker-grid">
+      <div class="speaker-card">
+        <div class="avatar">GT</div> <div class="name"> Gianluca Teza </div>
+        <div class="affiliation">MPI PKS</div>
+      </div>
     </div>
   </div>
-  -->
+
+  <div class="speaker-section">
+    <h2>Invited</h2>
+    <p style="margin-bottom: 20px; color: #555;">The following is a tentative list, subject to confirmation:</p>
+    
+    <div class="speaker-grid tentative-grid">
+      <div class="speaker-card">
+        <div class="avatar">FK</div>
+        <div class="name"> Flore Kunst </div>
+        <div class="affiliation">MPI MPL, FAU Erlangen</div>
+        <div class="status-label">(TBC)</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="avatar">...</div>
+        <div class="name">TBD</div>
+        <div class="affiliation">TBD</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="avatar">...</div>
+        <div class="name">TBD</div>
+        <div class="affiliation">TBD</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="avatar">...</div>
+        <div class="name">TBD</div>
+        <div class="affiliation">TBD</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="placeholder-note" style="margin-top: 40px; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
+    <em> Full speaker list and talk titles will be announced as they are confirmed. Check back soon.</em>
+  </p>
+
 </div>
 
 <footer>

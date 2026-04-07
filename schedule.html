@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schedule — NEQM 2026</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styles to replicate the LaTeX cell colors */
+    .schedule-table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
+    .schedule-table th, .schedule-table td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
+    .schedule-table thead { background-color: #f2f2f2; }
+    
+    .row-talk { background-color: #f9f9f9; font-weight: bold; }
+    .row-break { color: #666; font-style: italic; background-color: #ffffff; }
+    .row-poster { background-color: #f0f7ff; font-weight: bold; }
+    .row-discussion { background-color: #fffaf0; }
+  </style>
 </head>
 <body>
 
@@ -15,7 +26,6 @@
     <li><a href="speakers.html">Speakers</a></li>
     <li><a href="schedule.html" class="active">Schedule</a></li>
     <li><a href="venue.html">Venue</a></li>
-    <li><a href="poster.html">Poster</a></li>
   </ul>
 </nav>
 
@@ -25,38 +35,52 @@
 </div>
 
 <div class="container">
-  <p class="placeholder-note">The programme will be published here once finalised.</p>
-
-  <!--
-  Uncomment and edit to populate schedule:
 
   <div class="schedule-day">
-    <h3>Monday, June 8</h3>
+    <h3>Monday, June 8, 2026</h3>
     <table class="schedule-table">
       <thead>
-        <tr><th>Time</th><th>Speaker</th><th>Title</th></tr>
+        <tr>
+          <th style="width: 25%;">Time</th>
+          <th style="width: 75%;">Activity</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>09:00–09:30</td><td colspan="2">Registration &amp; Welcome</td></tr>
-        <tr><td>09:30–10:15</td><td>Speaker Name</td><td>Talk Title</td></tr>
-        <tr class="break-row"><td>10:15–10:45</td><td colspan="2">Coffee Break</td></tr>
-        <tr><td>10:45–11:30</td><td>Speaker Name</td><td>Talk Title</td></tr>
+        <tr class="row-talk"><td>09:00 – 10:30</td><td>TBD</td></tr>
+        <tr class="row-break"><td>10:30 – 11:00</td><td>Coffee Break</td></tr>
+        <tr class="row-talk"><td>11:00 – 12:30</td><td>Invited Lecture 1</td></tr>
+        <tr class="row-break"><td>12:30 – 14:00</td><td>Lunch Break</td></tr>
+        <tr class="row-poster"><td>14:00 – 14:30</td><td>Flash Poster Presentation</td></tr>
+        <tr class="row-talk"><td>14:30 – 16:00</td><td>Invited Lecture 2</td></tr>
+        <tr class="row-break"><td>16:00 – 16:30</td><td>Coffee Break</td></tr>
+        <tr class="row-poster"><td>16:30 – 18:00</td><td>Poster Session</td></tr>
+        <tr class="row-break"><td>19:00 - </td><td>Conference Dinner</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="schedule-day">
-    <h3>Tuesday, June 9</h3>
+    <h3>Tuesday, June 9, 2026</h3>
     <table class="schedule-table">
       <thead>
-        <tr><th>Time</th><th>Speaker</th><th>Title</th></tr>
+        <tr>
+          <th style="width: 25%;">Time</th>
+          <th style="width: 75%;">Activity</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>09:00–09:45</td><td>Speaker Name</td><td>Talk Title</td></tr>
+        <tr class="row-talk"><td>09:00 – 10:30</td><td>Invited Lecture 3</td></tr>
+        <tr class="row-break"><td>10:30 – 11:00</td><td>Coffee Break</td></tr>
+        <tr class="row-talk"><td>11:00 – 12:30</td><td>Invited Lecture 4</td></tr>
+        <tr class="row-break"><td>12:30 – 14:00</td><td>Lunch Break</td></tr>
+        <tr class="row-talk"><td>14:00 – 15:30</td><td>Invited Lecture 5</td></tr>
+        <tr class="row-discussion"><td>15:30 – 16:30</td><td>Discussions</td></tr>
+        <tr class="row-discussion"><td>16:30 - </td><td>Departure</td></tr>
+        
       </tbody>
     </table>
   </div>
-  -->
+
 </div>
 
 <footer>
