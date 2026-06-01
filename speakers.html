@@ -6,15 +6,67 @@
   <title>Speakers — NEQM 2026</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Adding some quick styles for the different status sections */
     .speaker-section { margin-bottom: 3rem; }
     .speaker-section h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
     .status-label { font-size: 0.8rem; text-transform: uppercase; color: #666; letter-spacing: 1px; }
-    .tentative-grid { opacity: 0.8; } /* Subtly distinguish unconfirmed speakers */
+    .tentative-grid { opacity: 0.8; }
+
+    /* Abstract toggle button */
+    .abstract-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      color: #555;
+      background: transparent;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      letter-spacing: 0.3px;
+    }
+    .abstract-btn:hover {
+      background: #f0f0f0;
+      border-color: #aaa;
+      color: #222;
+    }
+    .abstract-btn .arrow {
+      display: inline-block;
+      transition: transform 0.2s;
+      font-size: 0.65rem;
+    }
+    .abstract-btn.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Abstract panel */
+    .abstract-panel {
+      display: none;
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #f9f9f9;
+      border-left: 3px solid #ccc;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: #444;
+      text-align: left;
+    }
+    .abstract-panel.visible {
+      display: block;
+    }
+    .abstract-panel .talk-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 6px;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
-
 <nav>
   <a href="index.html" class="brand">NEQM 2026</a>
   <ul>
@@ -24,83 +76,100 @@
     <li><a href="venue.html">Venue</a></li>
   </ul>
 </nav>
-
 <div class="page-header">
   <h1>Invited Speakers</h1>
   <p>NEQM 2026 — June 8–9, Tübingen</p>
 </div>
-
 <div class="container wide">
-
   <div class="speaker-section">
     <h2>Confirmed Speakers</h2>
     <div class="speaker-grid">
+
       <div class="speaker-card">
-        <div class="avatar">GT</div> 
-        <div class="name"> Gianluca Teza </div>
+        <div class="avatar">GT</div>
+        <div class="name">Gianluca Teza</div>
         <div class="affiliation">MPI PKS, University of Trieste</div>
+        <button class="abstract-btn" onclick="toggleAbstract(this)" aria-expanded="false">
+          Abstract <span class="arrow">▼</span>
+        </button>
+        <div class="abstract-panel">
+          <div class="talk-title">Talk title TBA</div>
+          Abstract to be announced.
+        </div>
       </div>
+
       <div class="speaker-card">
         <div class="avatar">FK</div>
-        <div class="name"> Flore Kunst </div>
+        <div class="name">Flore Kunst</div>
         <div class="affiliation">MPI MPL, FAU Erlangen</div>
-    </div>
-            <div class="speaker-card">
+        <button class="abstract-btn" onclick="toggleAbstract(this)" aria-expanded="false">
+          Abstract <span class="arrow">▼</span>
+        </button>
+        <div class="abstract-panel">
+          <div class="talk-title">Talk title TBA</div>
+          Abstract to be announced.
+        </div>
+      </div>
+
+      <div class="speaker-card">
         <div class="avatar">SJ</div>
         <div class="name">Simon Jäger</div>
         <div class="affiliation">University of Bonn</div>
+        <button class="abstract-btn" onclick="toggleAbstract(this)" aria-expanded="false">
+          Abstract <span class="arrow">▼</span>
+        </button>
+        <div class="abstract-panel">
+          <div class="talk-title">Talk title TBA</div>
+          Abstract to be announced.
+        </div>
       </div>
-                  <div class="speaker-card">
+
+      <div class="speaker-card">
         <div class="avatar">JPB</div>
         <div class="name">Jean-Philippe Brantut</div>
-        <div class="affiliation"> EPFL</div>
+        <div class="affiliation">EPFL</div>
+        <button class="abstract-btn" onclick="toggleAbstract(this)" aria-expanded="false">
+          Abstract <span class="arrow">▼</span>
+        </button>
+        <div class="abstract-panel">
+          <div class="talk-title">Talk title TBA</div>
+          Abstract to be announced.
+        </div>
       </div>
-                        <div class="speaker-card">
+
+      <div class="speaker-card">
         <div class="avatar">PW</div>
-        <div class="name">Pascal Weckesser </div>
-        <div class="affiliation"> MPI MPQ</div>
+        <div class="name">Pascal Weckesser</div>
+        <div class="affiliation">MPI MPQ</div>
+        <button class="abstract-btn" onclick="toggleAbstract(this)" aria-expanded="false">
+          Abstract <span class="arrow">▼</span>
+        </button>
+        <div class="abstract-panel">
+          <div class="talk-title">Talk title TBA</div>
+          Abstract to be announced.
+        </div>
       </div>
-<div class="speaker-card">
+
+      <div class="speaker-card">
         <div class="avatar">MS</div>
-        <div class="name">Marco Schiro </div>
-        <div class="affiliation">IPhT, CNRS </div>
-      </div>
-  </div>
-  </div>
-
-<!--  
-  <div class="speaker-section">
-    <h2>Invited</h2>
-    <p style="margin-bottom: 20px; color: #555;">The following is a tentative list, subject to confirmation:</p>
-    
-    <div class="speaker-grid tentative-grid">
-
-      <div class="speaker-card">
-        <div class="avatar">...</div>
-        <div class="name">TBD</div>
-        <div class="affiliation">TBD</div>
+        <div class="name">Marco Schiro</div>
+        <div class="affiliation">IPhT, CNRS</div>
+        <button class="abstract-btn" onclick="toggleAbstract(this)" aria-expanded="false">
+          Abstract <span class="arrow">▼</span>
+        </button>
+        <div class="abstract-panel">
+          <div class="talk-title">Talk title TBA</div>
+          Abstract to be announced.
+        </div>
       </div>
 
-      <div class="speaker-card">
-        <div class="avatar">...</div>
-        <div class="name">TBD</div>
-        <div class="affiliation">TBD</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="avatar">...</div>
-        <div class="name">TBD</div>
-        <div class="affiliation">TBD</div>
-      </div>
     </div>
   </div>
--->
+
   <p class="placeholder-note" style="margin-top: 40px; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
-    <em> Talk titles will be announced as they are confirmed. Check back soon.</em>
+    <em>Talk titles and abstracts will be announced as they are confirmed. Check back soon.</em>
   </p>
-
 </div>
-
 <footer>
   <div class="footer-content">
     <div class="footer-sponsors">
@@ -114,5 +183,14 @@
   </div>
 </footer>
 
+<script>
+  function toggleAbstract(btn) {
+    var panel = btn.nextElementSibling;
+    var isOpen = panel.classList.contains('visible');
+    panel.classList.toggle('visible', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+</script>
 </body>
 </html>
